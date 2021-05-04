@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Linguistic Terms | Powered by Gabrielle</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <h1 class="title">Daily Linguistic Terms</h1>
+
+    <div class="box">
+        <div class="welcome">오늘의 언어학 용어는 “{{ contents.title }}”입니다.</div>
+        <div class="url">Source: {{ contents.url | safe }}</div>
+        <button onClick="window.location.reload();">Refresh!</button>
+    </div>
+
+
+
+    {% if contents.definition != "None" %}
+    <div class="box">
+        <h3 class="def-title">Definition</h3>
+        <div class="content">{{ contents.definition | safe }}</div>
+    </div>
+    {% endif %}
+
+    {% if contents.discussion != "None" %}
+    <div class="box">
+        <h3 class="dis-title">Discussion</h3>
+        <div class="content">{{ contents.discussion | safe }}</div>
+    </div>
+    {% endif %}
+
+    {% if contents.examples != "None" %}
+    <div class="box">
+        <h3 class="ex-title">Examples</h3>
+        <div class="content">{{ contents.examples | safe }}</div>
+    </div>
+    {% endif %}
+
+    {% if contents.see_also != "None" %}
+    <div class="box">
+        <h3 class="see-title">See Also</h3>
+        <div class="content">{{ contents.see_also | safe }}</div>
+    </div>
+    {% endif %}
+
+    {% if contents.reference != "None" %}
+    <div class="box">
+        <h3 class="ref-title">References</h3>
+        <div class="content">{{ contents.reference | safe }}</div>
+    </div>
+    {% endif %}
+
+    {% if contents.hierarchy != "None" %}
+    <div class="box">
+        <h3 class="glo-title">Glossary Hierarchy</h3>
+        <div class="content">{{ contents.hierarchy | safe }}</div>
+    </div>
+    {% endif %}
+</body>
+</html>

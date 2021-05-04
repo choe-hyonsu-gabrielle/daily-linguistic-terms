@@ -1,0 +1,40 @@
+div, button{
+    font-family: Segoe UI;
+    font-weight: lighter;
+}
+
+.title{
+  color: white;
+  background-color: #D2245B;
+  padding: 20px;
+}
+
+.welcome{
+    font-size: 20px;
+    color: #DB3D5E;
+}
+
+.url{
+    font-size: 14px;
+    font-style: italic;
+    color: grey;
+}
+
+h3{
+    color: #B0357D;
+    border-left: solid;
+    border-left-color: #82468C;
+    padding-left: 10px
+}
+
+.box{
+    margin: 10px;
+}
+
+.content{
+    margin: 20px;
+}
+
+.field-name-field-collection-page-number{
+    font-size: 11px;
+}
