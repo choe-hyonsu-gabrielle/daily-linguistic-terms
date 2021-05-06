@@ -41,11 +41,11 @@ def parse_html(html, url):
 
 @app.route('/')
 def landing():
+    terms = load_terms()
     term, url = random.choice(list(terms.items()))
     print('loading', term, 'from', url)
     contents = scrap_contents(url)
     return render_template('linguists_landing.html', contents=contents)
 
 if __name__ == '__main__':
-    terms = load_terms()
     app.run(debug=False)
